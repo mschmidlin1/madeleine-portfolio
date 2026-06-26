@@ -508,11 +508,6 @@ a:hover {
   text-underline-offset: 3px;
 }
 
-.footer-note {
-  font-size: 0.875rem;
-  opacity: 0.65;
-}
-
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
