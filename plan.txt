@@ -1,0 +1,35 @@
+You will build a static webpage that will act as a professional portfolio website for Madeleine Schmidlin.
+
+Features:
+- headshot feature (headshot.JPG)
+- Short bio (can be made up for now, we will fill that in later)
+- PDF resume download. (make a fake resume pdf for now, we will fill in the real one later)
+- timeline for academic and professional history
+- Patents and publication section (only 1 public patent for the time being)
+- Skills section with short descriptions for Skills
+- linked in website link (https://www.linkedin.com/in/madeleineschmidlin/)
+
+
+Here are the timeline things:
+- Bachelor of Science in Chemical Engineering (University of Oregon - 2015-2019)
+- Master of Engineering in Materials Science and Engineering (Cornell - 2021-2023)
+- Research Experience for undergraduates (Notre Dame - 2016)
+    - Created low cost methods to detect antibiotic resistance. 
+- Research and Development intern at W.R. Grace (Columbia MD - 2017)
+    - Gained experience with method development, job safety analysis, wet chemistry, and various analytical and polymer characterization techniques, including GPC, NMR, melt flow rate, and rheology.
+- Process Engineer intern Corning Inc. 2018
+    - Assesed and quantified process risk of screen printing on Gorilla Glass for auto interior use cases.
+- Process Engineer at Corning 2019-2022
+    - Accelerated glass vial manufacturing in response to the Covid 19 pandemic.
+- Sr. Process Engineer at Corning 2022-2025
+    - Screened glass compositions using induction melting technology to asses viability for electric glass melting.
+- Staff Scientist, Melt Process Development at Corning 2025-Present
+    - Develop new processes for next generation Gorilla Glass products.
+
+
+Page Aesthetic:
+- Warehouse industrial chic vibe (similar vibe to turning an old warehouse or manufacturing facility into a new brewery)
+    - Red brick
+    - Warm light tones
+    - Edison Bulbs (don't necessarily put an edison bulb in, this is just for vibe)
+    - metallic

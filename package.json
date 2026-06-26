@@ -1,0 +1,11 @@
+{
+  "name": "madeleine-portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "serve . -l 8080",
+    "generate-resume": "python3 scripts/generate-resume.py"
+  },
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
