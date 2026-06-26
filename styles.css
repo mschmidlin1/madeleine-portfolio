@@ -215,6 +215,7 @@ a:hover {
   width: 280px;
   height: 280px;
   object-fit: cover;
+  object-position: 50% 28%;
   border-radius: 50%;
   border: 3px solid var(--warm-light);
 }
