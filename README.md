@@ -26,7 +26,8 @@ Static professional portfolio site for Madeleine Schmidlin.
 
 ## Project structure
 
-- `index.html` — main page
-- `styles.css` — warehouse industrial chic styling
-- `main.js` — navigation and small UI interactions
-- `assets/` — headshot and resume PDF
+- `src/index.html` — main page
+- `src/styles.css` — warehouse industrial chic styling
+- `src/main.js` — navigation and small UI interactions
+- `src/assets/` — headshot and resume PDF
+- `scripts/generate-resume.py` — builds placeholder resume PDF
