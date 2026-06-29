@@ -16,6 +16,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        var theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.setAttribute("data-theme", theme);
+        }
+      })();
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -23,25 +31,40 @@
     <header class="site-header">
       <div class="header-inner">
         <a class="logo" href="#about">Madeleine Schmidlin</a>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-nav"
-          aria-label="Open menu"
-        >
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
-        <nav id="site-nav" class="site-nav" aria-label="Main">
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#timeline">Timeline</a></li>
-            <li><a href="#patents">Patents</a></li>
-            <li><a href="#skills">Skills</a></li>
-          </ul>
-        </nav>
+        <div class="header-end">
+          <nav id="site-nav" class="site-nav" aria-label="Main">
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#timeline">Timeline</a></li>
+              <li><a href="#patents">Patents</a></li>
+              <li><a href="#skills">Skills</a></li>
+            </ul>
+          </nav>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to dark mode"
+          >
+            <svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+            <svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Open menu"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
       </div>
     </header>
 
