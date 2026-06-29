@@ -24,6 +24,13 @@ jobs:
       - name: Generate resume PDF
         run: python3 scripts/generate-resume.py
 
+      - name: Stamp asset cache busters
+        run: |
+          SHORT="${{ github.sha }}"
+          SHORT="${SHORT:0:7}"
+          sed -i -E "s|href=\"styles\.css(\?v=[^\"]*)?\"|href=\"styles.css?v=${SHORT}\"|g" src/index.html
+          sed -i -E "s|src=\"main\.js(\?v=[^\"]*)?\"|src=\"main.js?v=${SHORT}\"|g" src/index.html
+
       - name: Log in to GHCR
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
 
