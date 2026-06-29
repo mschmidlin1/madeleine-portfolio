@@ -1,0 +1,15 @@
+.git
+.github
+.vscode
+node_modules
+k8s
+docs
+scripts
+README.md
+package.json
+package-lock.json
+.gitignore
+.dockerignore
+Dockerfile
+.DS_Store
+**/.DS_Store

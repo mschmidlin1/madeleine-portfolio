@@ -1,0 +1,47 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    env:
+      KUBECONFIG: /home/mike/.kube/config
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate resume PDF
+        run: python3 scripts/generate-resume.py
+
+      - name: Log in to GHCR
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+
+      - name: Build and push image
+        run: |
+          IMAGE=ghcr.io/mschmidlin1/madeleine-portfolio
+          docker build -t "${IMAGE}:${{ github.sha }}" -t "${IMAGE}:latest" .
+          docker push "${IMAGE}:${{ github.sha }}"
+          docker push "${IMAGE}:latest"
+
+      - name: Apply Kubernetes manifests
+        run: kubectl apply -k k8s/
+
+      - name: Roll out new image
+        run: |
+          kubectl set image deployment/madeleine \
+            app=ghcr.io/mschmidlin1/madeleine-portfolio:${{ github.sha }} \
+            -n madeleine
+          kubectl rollout status deployment/madeleine \
+            -n madeleine \
+            --timeout=5m
