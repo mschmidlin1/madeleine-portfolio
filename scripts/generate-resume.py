@@ -75,6 +75,6 @@ LINES = [
     (10, "B.S., Chemical Engineering - University of Oregon (2015-2019)"),
 ]
 
-output = Path(__file__).resolve().parent.parent / "assets" / "resume.pdf"
+output = Path(__file__).resolve().parent.parent / "src" / "assets" / "resume.pdf"
 output.write_bytes(build_pdf(LINES))
 print(f"Resume written to {output}")
