@@ -413,6 +413,10 @@ a:hover {
   border-top: 1px solid rgba(122, 114, 104, 0.12);
 }
 
+.publications-section {
+  border-top: 1px solid rgba(122, 114, 104, 0.12);
+}
+
 .patent-card {
   max-width: 40rem;
   padding: 1.75rem 2rem;
