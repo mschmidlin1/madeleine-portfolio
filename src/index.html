@@ -16,6 +16,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css?v=3" />
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      imagesrcset="assets/headshot-560.webp 560w, assets/headshot-840.webp 840w"
+      imagesizes="(max-width: 768px) 220px, 280px"
+      fetchpriority="high"
+    />
     <script>
       (function () {
         var theme = localStorage.getItem("theme");
@@ -74,13 +82,23 @@
       <section id="about" class="hero section">
         <div class="hero-inner">
           <div class="hero-image-wrap">
-            <img
-              class="hero-headshot"
-              src="assets/headshot.JPG"
-              alt="Portrait of Madeleine Schmidlin"
-              width="280"
-              height="280"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/headshot-560.webp 560w, assets/headshot-840.webp 840w"
+                sizes="(max-width: 768px) 220px, 280px"
+              />
+              <img
+                class="hero-headshot"
+                src="assets/headshot.jpg"
+                srcset="assets/headshot-560.jpg 560w, assets/headshot-840.jpg 840w"
+                sizes="(max-width: 768px) 220px, 280px"
+                alt="Portrait of Madeleine Schmidlin"
+                width="280"
+                height="280"
+                fetchpriority="high"
+              />
+            </picture>
           </div>
           <div class="hero-content">
             <p class="hero-eyebrow">Materials &amp; Process Engineering</p>
