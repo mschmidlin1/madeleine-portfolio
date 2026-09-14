@@ -21,9 +21,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate resume PDF
-        run: python3 scripts/generate-resume.py
-
       - name: Stamp asset cache busters
         run: |
           SHORT="${{ github.sha }}"
